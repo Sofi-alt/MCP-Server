@@ -31,7 +31,7 @@ Implementation of the below provided tools can be accomplished either via if/els
 
 For the authent. reasons, before the exposition of tools with decorators and arguments (on additional descriptive explanation of tool functionality for the correct functionality for the LLM based Client object on the basis of MCP Hist), the function with the "auth = OAuthProxy() would be added".
 
-- Additionally Caching integration within the tool execution for the provision of creation of the possible temporal storage (_temp_) for the further tool usage; as well as addition of the specifications/arguments within the tool calls for the differentiation between the functionality. -> .json format returning
+- Additionally **Caching integration within the tool execution** for the provision of creation of the possible temporal storage (_temp_) for the further tool usage; as well as addition of the specifications/arguments within the tool calls for the differentiation between the functionality. -> .json format returning
 
 ### 2. Prompts
 As general **@mcp.prompt** might be used in my case for the automatic deterministic prompt injection before the tool exposition for the deterministic final answer formulation to guide the final answer, using f""-string to keep all provided final answers in standardised way. (eg. acting as answer template, including specifications on providing "citation" - datasets used for the final answer generation / temporal information - day of answer generation OR dataset temporal coverage / license )
