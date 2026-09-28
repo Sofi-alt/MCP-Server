@@ -13,7 +13,7 @@ In context of this implementation I would use FastMCP module due to its usabilit
 
 OR | AND
 
-2) **Text-to-SQL Benchmarks** eg. **TACO** (Benchmark mirroring real-time application with ambiguous and multi-database queries with provided gold standard answers/ 2 main datasets collections).
+2) **Text-to-SQL | Text-to-SPARQL Benchmarks** eg. **TACO** (Benchmark mirroring real-time application with ambiguous and multi-database queries with provided gold standard answers/ 2 main datasets collections).
 
 ## Possible Architectural Structure (High Level)
 Model Context Protocol simplified implementation would incorporate all 3 main components in interconnected way with reference of prompts and resources within the main tool implementation calls (ref. using as "helpers"), Remote MCP server using Streamable HTTP eg. "..., host = "127.0.0.1", port = 8000": **1) Tools; 2) Prompts; 3) Resources;**
