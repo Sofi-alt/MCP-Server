@@ -18,8 +18,8 @@ Model Context Protocol simplified implementation would incorporate all 3 main co
 ### 1. Tools
 
 
-## 2. Prompts
+### 2. Prompts
 
 
 
-## 3. Resources
+### 3. Resources
