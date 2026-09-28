@@ -5,7 +5,7 @@ In the following repository for the thesis work on the **Model Context Protocol 
 **Evaluation Framework:**
 1) Using **pytest custom modules** for custom written queries on basis of selected **topics/tags**
 
-OR|AND
+OR | AND
 
 2) **Text-to-SQL Benchmarks** eg. **TACO** (Benchmark mirroring real-time application with ambiguous and multi-database queries with provided gold standard answers/ 2 main datasets collections).
 
