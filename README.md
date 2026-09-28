@@ -13,10 +13,10 @@ In context of this implementation I would use FastMCP module due to its usabilit
 
 OR | AND
 
-2) **Text-to-SQL | Text-to-SPARQL Benchmarks** eg. **TACO** (Benchmark mirroring real-time application with ambiguous and multi-database queries with provided gold standard answers/ 2 main datasets collections).
+(2) **Text-to-SQL | Text-to-SPARQL Benchmarks** eg. **TACO** (Benchmark mirroring real-time application with ambiguous and multi-database queries with provided gold standard answers/ 2 main datasets collections). - not really fully viable in sense)
 
 ## Possible Architectural Structure (High Level)
-Model Context Protocol simplified implementation would incorporate all 3 main components in interconnected way with reference of prompts and resources within the main tool implementation calls (ref. using as "helpers"), Remote MCP server using Streamable HTTP eg. "..., host = "127.0.0.1", port = 8000": **1) Tools; 2) Prompts; 3) Resources;**
+Model Context Protocol simplified implementation would incorporate all 3 main components in interconnected way with reference of prompts within the main tool implementation calls (ref. using as "helpers"), Remote MCP server using Streamable HTTP eg. "..., host = "127.0.0.1", port = 8000": **1) Tools; 2) Prompts; 3) Resources;**
   
 ### 1. Tools 
 **3 main functional tools**  with the **main aim of endpoints discovery & schema exploration** within the NL question posed for accurate question/query answering
@@ -32,8 +32,5 @@ Implementation of the below provided tools can be accomplished either via if/els
 For the authent. reasons, before the exposition of tools with decorators and arguments (on additional descriptive explanation of tool functionality for the correct functionality for the LLM based Client object on the basis of MCP Hist), the function with the "auth = OAuthProxy() would be added".
 
 ### 2. Prompts
-As general **@mcp.prompt** might be used in my case for the automatic deterministic prompt injection with in the tool exposition for the deterministic final answer formulation, using f""-string to keep all provided final answers in standardised way.
-
-### 3. Resources
-For the resources part, resources decorator - used for the dictionary of endpoints/APIs for the usage within the tools called with added arguments for the description of the **@mcp.resource("")**.
+As general **@mcp.prompt** might be used in my case for the automatic deterministic prompt injection after the tool exposition for the deterministic final answer formulation to guide the final answer, using f""-string to keep all provided final answers in standardised way.
 
