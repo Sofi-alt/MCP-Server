@@ -9,14 +9,14 @@ Documentation used:
 In context of this implementation I would use FastMCP module due to its usability rather than general SDKs official Python specification provided on the MCP Anthropic Documentation.
 
 **Evaluation Framework:**
-1) Using **pytest custom modules** for custom written queries on basis of selected **topics/tags**
+1) Using **pytest custom modules** for custom written queries on basis of selected **topics/tags**. Possibly with integration of **LLM as a Judge framework** OR **MCPEval/MCPUniverse**; Marks on the Answer/Tool Execution Accuracy eg achievement of the intended usage.
 
 OR | AND
 
 (2) **Text-to-SQL | Text-to-SPARQL Benchmarks** eg. **TACO** (Benchmark mirroring real-time application with ambiguous and multi-database queries with provided gold standard answers/ 2 main datasets collections). - not really fully viable in sense of current structure would need custom sql/sparql changing for the answers and further to json format for call returns)
 
 ## Possible Architectural Structure (High Level)
-Model Context Protocol simplified implementation would incorporate all 3 main components in interconnected way with reference of prompts within the main tool implementation calls (ref. using as "helpers"), Remote MCP server using Streamable HTTP eg. "..., host = "127.0.0.1", port = 8000": **1) Tools; 2) Prompts; 3) Resources;**
+Model Context Protocol simplified implementation would incorporate all 3 main components in interconnected way with reference of prompts within the main tool implementation calls (ref. using as "helpers"), Remote MCP server using Streamable HTTP eg. "..., host = "127.0.0.1", port = 8000": **1) Tools; 2) Prompts; 3) Resources (might be added as schema static specifications eg DCAT standard for the accurate extraction within the tool execution);**
   
 ### 1. Tools 
 **3 main functional tools**  with the **main aim of endpoints discovery & schema exploration** within the NL question posed for accurate question/query answering
