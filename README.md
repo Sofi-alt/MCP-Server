@@ -23,12 +23,17 @@ Model Context Protocol simplified implementation would incorporate all 3 main co
 
 Implementation of the below provided tools can be accomplished either via if/else integration of the dictionary containing specifications on the callable APIs for CKAN/DKAN/Socrata/OpenDataSoft portal endpoints OR each functional tool written specifically for each API integration (eg. def find_portals_list_ckan..):
 
-1) 
+1) **Dataset/Portal Search Tool:** responsible for searching for relevant portals by checking listed datasets (DCAT structured properties), groups and tags for the relevant ones based on differentiating catalogue API endpoints, and possibly creating sub-list of pre-filtered relevant datasets for the initially posed natural language question answering.
 
+2) **Schema Exploration:** tool responsible for the metadata extraction from the pre-filtered portals (DCAT, eg. Super-class dcat:Dataset - *distribution*, *spatial/geographic coverage*; Super-class dcat:Resource - *creator, description*, *identifier*, *keyword(s), tag(s)*, *license*, *language*, **theme, category, title, genre**).
 
+3) **Dataset Querying:** dataset querying tool would be responsible for finding relevant data to answer the natural language query within the before-found relevant datasets/endpoints etc., based on the beforehand schema exploration of tags/theme/category/title/genre, extract the information (eg DCAT class Distribution, **access URL, download URL**).
+
+For the authent. reasons, before the exposition of tools with decorators and arguments (on additional descriptive explanation of tool functionality for the correct functionality for the LLM based Client object on the basis of MCP Hist), the function with the "auth = OAuthProxy() would be added".
 
 ### 2. Prompts
-
-
+As general **@mcp.prompt** might be used in my case for the automatic deterministic prompt injection with in the tool exposition for the deterministic final answer formulation, using f""-string to keep all provided final answers in standardised way.
 
 ### 3. Resources
+For the resources part, resources decorator - used for the dictionary of endpoints/APIs for the usage within the tools called with added arguments for the description of the **@mcp.resource("")**.
+
